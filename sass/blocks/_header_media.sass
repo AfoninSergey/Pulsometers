@@ -1,0 +1,49 @@
+@media ( max-width:  991px)
+    .header
+        &__logo
+            max-width: 220px
+        &__official
+            font-size: 11px
+            span
+                margin-top: 6px
+                font-size: 16px
+        &__call
+            a
+                font-size: 16px
+
+@media ( max-width:  767px)
+    .header
+        flex-wrap: wrap
+        justify-content: space-around
+        &__call
+            margin-top: 9px
+            width: 100%
+            display: flex
+            align-items: center
+            a
+                order: 1
+                margin-left: 105px
+@media ( max-width:  575px)
+    .header
+        flex-direction: column
+        &__logo
+            order: 1
+            max-width: 251px
+            margin-top: 20px
+        &__official
+            order: 0
+            font-size: 14px
+            color: $d_white
+            span
+                margin-top: 5px
+                font-size: 24px
+        &__call
+            order: 3
+            display: block
+            a
+                margin: 0
+                margin-top: 10px
+                margin-left: -3px              
+                text-align: center
+                font-size: 28px
+                color: $d_white

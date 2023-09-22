@@ -3,8 +3,24 @@
 .container
     max-width: 950px
     margin: 0 auto
+
 @import 'base/variables'
 @import 'base/mixins'
 @import 'blocks/promo'
+@import 'blocks/promo_media'
 @import 'blocks/header'
+@import 'blocks/header_media'
 @import 'blocks/buttons'
+
+@media ( max-width:  1199px)
+    .container
+        max-width: 800px
+@media ( max-width:  991px)
+    .container
+        max-width: 670px
+@media ( max-width:  767px)
+    .container
+        max-width: 480px
+@media ( max-width:  575px)
+    .container
+        max-width: 300px

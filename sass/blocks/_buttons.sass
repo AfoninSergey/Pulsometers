@@ -4,6 +4,7 @@
     border-radius: 5px
     background-color: $red
     color: #ffffff
+    font-weight: 500
     text-align: center
     text-transform: uppercase
     transition-duration: .2s
@@ -13,12 +14,46 @@
         width: 150px
         height: 30px
         font-size: 12px
-        font-weight: 500
     &_promo
-        margin-left: auto
         margin-top: 67px
+        margin-left: auto
         width: 300px
         height: 50px
-
+        font-size: 16px
     &:hover
         color: #d0d0d0
+
+@media ( max-width:  1199px)
+    .button
+        &_promo
+            margin-top: 55px
+@media ( max-width:  991px)
+    .button
+        &_header
+            margin-top: 6px
+            width: 146px
+            font-size: 11px
+        &_promo
+            width: 270px
+@media ( max-width:  767px)
+    .button
+        &_header
+            margin: 0
+            margin-left: 67px
+            width: 130px
+        &_promo
+            margin: 40px auto 0
+            width: 240px
+            height: 45px
+            font-size: 15px
+@media ( max-width:  575px)
+    .button
+        &_header
+            margin: 22px auto 0
+            width: 210px
+            height: 50px
+            font-size: 19px
+        &_promo
+            margin-top: 30px
+            height: 52px
+            font-size: 16px
