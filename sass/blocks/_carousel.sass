@@ -1,0 +1,61 @@
+.carousel
+    padding: 81px 0 40px
+    &__slick-slider
+        position: relative
+        width: 750px
+        margin: 0 auto
+        .carousel__slick-slid
+            display: flex
+            height: 580px
+            justify-content: center
+            align-items: center
+            img
+                max-width: 100%
+        .slick-next, .slick-prev
+            position: absolute
+            width: 40px
+            height: 40px
+            background: none
+            border: 10px solid $red
+            border-right: none
+            border-bottom: none
+            border-radius: 4px
+            top: 50%
+            transition-duration: .2s
+        .slick-prev
+            left: -66px
+            transform: translateY(-50%) rotate(-45deg)
+            &:hover
+                transform: translateY(-50%) rotate(-45deg) scale(1.1)
+        .slick-next
+            right: -66px
+            transform: translateY(-50%) rotate(135deg)
+            &:hover
+                transform: translateY(-50%) rotate(135deg) scale(1.1)
+        .slick-dots
+            bottom: -5px
+            li
+                width: 15px
+                height: 15px
+                button
+                    position: relative
+                    width: inherit
+                    height: inherit
+                    background-color: $red
+                    border-radius: 50%
+                    &::before
+                        opacity: .8
+                        font-size: 0
+                        line-height: 0
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%, -50%)
+            .slick-active
+                button
+                    &::before
+                        content: ''
+                        display: block
+                        width: 7px
+                        height: 7px
+                        background-color: #fff
+                        border-radius: 50%
