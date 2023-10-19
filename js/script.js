@@ -1,3 +1,4 @@
+/* SLICK-SLIDER
 $(document).ready(function () {
     $(".carousel__slick-slider").slick({
         autoplay: false,
@@ -23,4 +24,27 @@ $(document).ready(function () {
             },
         ],
     });
+});
+*/
+
+const slider = tns({
+    container: ".carousel__tiny-slider",
+    center: true,
+    autoplay: true,
+    speed: 1200,
+    autoplayButtonOutput: false,
+    controls: true,
+    nav: false,
+    navPosition: "bottom",
+    controlsText: ["", ""],
+    responsive: {
+        576: {
+            controls: true,
+            nav: false,
+        },
+        1: {
+            controls: false,
+            nav: true,
+        },
+    },
 });
