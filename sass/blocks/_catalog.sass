@@ -1,0 +1,57 @@
+.catalog
+    padding: 40px 0 50px
+    text-align: center
+    &__title
+        margin: 0
+        font-size: 30px
+        +lh
+        font-weight: 700
+        text-transform: uppercase
+        color: $dark
+    &__tabs
+        margin: 70px 0 0
+        padding: 0
+        list-style: none
+        display: flex
+        justify-content: center
+    &__tab
+        margin: 0 5px
+        width: 220px
+        height: 50px
+        border: 2px solid #d0d0d0
+        font-size: 18px
+        line-height: 48px
+        font-weight: 500
+        text-transform: uppercase
+        color: #6b6b6b
+        background: none
+        transform: skewX(-25deg)
+        cursor: pointer
+        transition: 0.2s
+        &-active
+            background-color: $red
+            border: none
+            color: #fff
+            &:active
+                border: none !important
+                color: $d_white
+        &:hover
+            border: none            
+            box-shadow: 3px 3px 20px $red
+        &:active
+            box-shadow: none
+            border: 2px solid #d0d0d0
+        span
+            display: block
+            transform: skewX(25deg)
+    &__content
+        margin: 59px 0 0
+        padding: 0
+        list-style: none
+        display: none
+        justify-content: center
+        flex-wrap: wrap
+        &_active
+            display: flex
+        .pulsometer
+            margin: 9px

@@ -48,3 +48,35 @@ const slider = tns({
         },
     },
 });
+
+$(document).ready(function () {
+    function char(itm) {
+        $(itm).each(function (i) {
+            $(this).on("click", function (e) {
+                e.preventDefault();
+                $(".pulsometer__wrapper")
+                    .eq(i)
+                    .toggleClass("pulsometer__wrapper_char");
+            });
+        });
+    }
+
+    char(".pulsometer__link_more");
+    char(".pulsometer__link_back");
+
+    $("ul.catalog__tabs").on(
+        "click",
+        "li:not(.catalog__tab-active)",
+        function () {
+            $(this)
+                .addClass("catalog__tab-active")
+                .siblings()
+                .removeClass("catalog__tab-active")
+                .closest("div.container_tabs")
+                .find("ul.catalog__content")
+                .removeClass("catalog__content_active")
+                .eq($(this).index())
+                .addClass("catalog__content_active");
+        }
+    );
+});
