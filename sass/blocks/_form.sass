@@ -17,6 +17,8 @@
             background-color: #eeeeee
     &_consultation
         margin-top: 36px
+    &_consult, &_buy
+        margin-top: 25px
 
 @media ( max-width:  1199px)
     .form
@@ -24,9 +26,12 @@
             margin-top: 30px
 @media ( max-width:  991px)
     .form
-        &_consultation
+        &_consultation, &_consult, &_buy
             margin-top: 20px
 @media ( max-width:  575px)
     .form
-        &_consultation
-            margin-top: 10px
+        &_consultation, &_consult, &_buy
+            margin-top: 5px
+        &_consult, &_buy
+            input
+                width: 295px

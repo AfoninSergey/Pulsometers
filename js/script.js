@@ -79,4 +79,29 @@ $(document).ready(function () {
                 .addClass("catalog__content_active");
         }
     );
+
+    $("[data-modal=consultation]").on('click', function() {
+        $(".modal__consultation").addClass('modal__consultation_visible')
+        $(".modal").fadeIn(500)
+    })
+
+    // $(".button_pulsometer").on('click', function() {
+    //     $(".modal__buy").addClass('modal__buy_visible')
+    //     $(".modal").fadeIn(500)
+    // })
+
+    $(".button_pulsometer").each(function(i) {
+        $(this).on('click', function() {
+            $(".modal__buy .modal__descr").text($('.pulsometer__title').eq(i).text())
+            $(".modal__buy").addClass('modal__buy_visible')
+            $(".modal").fadeIn(500)
+        })
+    })
+
+    $(".modal__close").on('click', function() {
+        $(".modal").fadeOut(300)
+        $(".modal__consultation").removeClass('modal__consultation_visible')
+        $(".modal__buy").removeClass('modal__buy_visible')
+    })
+    
 });

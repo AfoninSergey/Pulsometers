@@ -1,0 +1,32 @@
+@media ( max-width:  767px)
+    .modal
+        &__consultation, &__buy, &__thanks
+            min-height: 300px
+            padding: 28px 0 20px        
+        &__descr
+            margin-top: 5px
+@media ( max-width:  575px)
+    .modal
+        &__consultation, &__buy, &__thanks
+            min-height: 100px
+            width: 305px
+            padding: 33px 0 20px
+        &__title
+            font-size: 16px
+        &__descr
+            font-size: 12px
+            margin-top: 0
+        &__close
+            top: -41px
+            right: 0
+@media ( max-height:  430px)
+    .modal
+        &__consultation, &__buy, &__thanks
+            max-height: 430px
+        &__title
+            margin: 0
+        &__close
+            right: -45px
+            +va
+            &:hover
+                transform: translateY(-50%) scale(1.05)
