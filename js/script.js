@@ -104,4 +104,39 @@ $(document).ready(function () {
         $(".modal__buy").removeClass('modal__buy_visible')
     })
     
+    function validateForms(form) {
+        $(form).validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2
+                },
+                phone: "required",
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                name: {
+                    required: "Введите Ваше имя!",
+                    minlength: jQuery.validator.format("Введите не менее {0} букв!")
+                },
+                phone: {
+                    required: "Введите Ваш номер телефона!"                    
+                },
+                email: {
+                    required: "Введите Ваш email!",
+                    email: "Неверный формат email адреса!"
+                }
+            }
+            
+        }) 
+    }
+    validateForms(".form_consultation")
+    validateForms(".form_consult")
+    validateForms(".form_buy")
+    
+    $("input[name=phone]").mask("+7(999) 999-99-99");
+
 });

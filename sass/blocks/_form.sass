@@ -15,6 +15,11 @@
         transition-duration: .2s
         &:hover
             background-color: #eeeeee
+    input.error
+        border: 2px solid $red
+    label.error
+        font-size: 13px
+        margin-top: 3px
     &_consultation
         margin-top: 36px
     &_consult, &_buy
@@ -35,3 +40,7 @@
         &_consult, &_buy
             input
                 width: 295px
+@media ( max-height:  430px)
+    .form
+        input
+            margin-top: 7px
