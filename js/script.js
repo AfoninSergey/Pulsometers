@@ -137,6 +137,64 @@ $(document).ready(function () {
     validateForms(".form_consult")
     validateForms(".form_buy")
     
-    $("input[name=phone]").mask("+7(999) 999-99-99");
+    // $("input[name=phone]").mask("+7(999) 999-99-99");
+
+    $('input[name=phone]').mask("+7 (999) 999-9999").on('click', function () {
+        if ($(this).val() === '+7 (___) ___-____') {
+            $(this).get(0).setSelectionRange(4, 4);
+        }
+    });
+
+    $('form').submit(function(e) {
+        e.preventDefault();
+
+        if (!$(this).valid()) {
+            return;
+        }
+
+        $.ajax({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function() {
+            $(this).find('input').val("");
+
+            $(".modal__consultation").removeClass('modal__consultation_visible');
+            $(".modal__buy").removeClass('modal__buy_visible');
+
+            $(".modal__thanks").addClass('modal__thanks_visible');
+            
+            setTimeout(() => {
+                $(".modal__thanks").removeClass('modal__thanks_visible');
+                $(".modal").fadeOut(300);
+            }, 3000)
+
+            $('form').trigger("reset");
+        });
+        return false;
+    });
+
+    // Pageup
+
+    $(window).scroll( function() {
+        if ($(this).scrollTop() > 600) {
+            $(".pageup").fadeIn()           
+        } else {
+            $(".pageup").fadeOut()
+        }        
+    });
+
+    // Smooth scroll
+    // $("a").on('click', function(event) {
+    //     if (this.hash !== "") {
+    //         event.preventDefault();
+    //         const hash = this.hash;
+    //         $('html, body').animate({
+    //             scrollTop: $(hash).offset().top
+    //         }, 800, function() {
+    //             window.location.hash = hash;
+    //         });
+    //     }
+    // });
 
 });

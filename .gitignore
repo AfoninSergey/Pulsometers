@@ -19,3 +19,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# my-emails and passwords
+src/mailer/smart.php
+dist/mailer/smart.php
+smart.php

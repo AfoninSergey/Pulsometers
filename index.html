@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="css/style.min.css" />
     </head>
     <body>
-        <section class="promo">
+        <section id="up" class="promo">
             <div class="container">
                 <header class="header">
                     <a class="header__logo">
@@ -76,7 +76,7 @@
             <div class="container">
                 <h2 class="advantages__header">Наши преимущества</h2>
                 <div class="advantages__items">
-                    <div class="advantages__item">
+                    <div class="advantages__item advantages__item_cup">
                         <img src="img/icons/cup_icon.jpg" alt="cup_icon" />
                         <h3>Делимся опытом</h3>
                         <p>
@@ -85,7 +85,7 @@
                             Босфор, готовятся к соревнованиям по триатлону!
                         </p>
                     </div>
-                    <div class="advantages__item">
+                    <div class="advantages__item advantages__item_heart">
                         <img src="img/icons/heart_icon.png" alt="heart_icon" />
                         <h3>Заботимся о здоровье</h3>
                         <p>
@@ -94,7 +94,7 @@
                             Вашим близким!
                         </p>
                     </div>
-                    <div class="advantages__item">
+                    <div class="advantages__item advantages__item_shoe">
                         <img src="img/icons/shoe_icon.png" alt="shoe_icon" />
                         <h3>Учим бегать</h3>
                         <p>
@@ -1120,7 +1120,6 @@
                         name="email"
                         placeholder="E-mail"
                         required
-                        minlength="6"
                     />
                     <button class="button button_form button_modal">
                         Купить
@@ -1128,12 +1127,17 @@
                 </form>
             </div>
             <div class="modal__thanks">
+                <div class="modal__close">&#10006;</div>
                 <h2 class="modal__title">Спасибо за вашу заявку!</h2>
                 <div class="modal__descr">
                     Наш менеджер свяжется с вами в ближайшее время!
                 </div>
             </div>
         </section>
+        <a href="#up" class="pageup"
+            ><img src="img/icons/page_up_icon.svg" alt="page_up_icon"
+        /></a>
+
         <!-- SLICK
         <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
