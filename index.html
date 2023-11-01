@@ -14,6 +14,7 @@
         <!--SLICK-SLIDER <link rel="stylesheet" href="css/slick.css" />
         <link rel="stylesheet" href="css/slick-theme.css" />-->
         <link rel="stylesheet" href="css/tiny-slider.min.css" />
+        <link rel="stylesheet" href="css/animate.css" />
         <link rel="stylesheet" href="css/style.min.css" />
     </head>
     <body>
@@ -143,7 +144,7 @@
                 </form>
             </div>
         </section>
-        <section class="carousel">
+        <div class="carousel">
             <!--SLICK-SLIDER <div class="carousel__slick-slider">
                 <div class="carousel__slick-slid">
                     <img
@@ -199,7 +200,7 @@
                     </li> -->
                 </ul>
             </div>
-        </section>
+        </div>
         <section class="catalog">
             <div class="container container_tabs">
                 <h2 class="catalog__title">Каталог пульсометров</h2>
@@ -944,7 +945,9 @@
             <div class="container">
                 <h2 class="feedback__title">Отзывы клиентов</h2>
                 <ul class="feedback__list">
-                    <li class="feedback__item">
+                    <li
+                        class="feedback__item wow animate__animated animate__fadeInUp"
+                    >
                         <img
                             src="img/pictures/Irina_photo.jpg"
                             alt="Irina_photo"
@@ -964,7 +967,11 @@
                             <p>Спасибо, RunSmart!</p>
                         </div>
                     </li>
-                    <li class="feedback__item">
+                    <li
+                        class="feedback__item wow animate__animated animate__fadeInUp"
+                        data-wow-duration="1s"
+                        data-wow-delay="0.2s"
+                    >
                         <img
                             src="img/pictures/Ivan_photo.jpg"
                             alt="Ivan_photo"
@@ -987,7 +994,11 @@
                             </p>
                         </div>
                     </li>
-                    <li class="feedback__item">
+                    <li
+                        class="feedback__item wow animate__animated animate__fadeInUp"
+                        data-wow-duration="1s"
+                        data-wow-delay="0.2s"
+                    >
                         <img
                             src="img/pictures/Julia_photo.jpg"
                             alt="Julia_photo"
@@ -1015,7 +1026,7 @@
             </div>
         </section>
         <footer class="footer">
-            <!-- <iframe
+            <!--Google map <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.3358049924154!2d37.644438837387156!3d55.770039432509506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a636edcd2ad%3A0x4c2ca101e2c8c617!2z0JzRj9GB0L3QuNGG0LrQuNC5INC_0YAt0LQsIDQvMywg0JzQvtGB0LrQstCwLCAxMDcwNzg!5e0!3m2!1sru!2sru!4v1698054705197!5m2!1sru!2sru"
                 width="100%"
                 height="100%"
@@ -1025,7 +1036,6 @@
                 referrerpolicy="no-referrer-when-downgrade"
             ></iframe> -->
             <script
-                type="text/javascript"
                 charset="utf-8"
                 async
                 src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A125b5780452d911e0ed1f385aac860e897d1ca30af7bb4ab15f3e3a979f94c7b&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"
@@ -1146,6 +1156,7 @@
         <script src="js/tiny-slider.min.js"></script>
         <script src="js/jquery.validate.min.js"></script>
         <script src="js/jquery.maskedinput.min.js"></script>
+        <script src="js/wow.min.js"></script>
         <script src="js/script.js"></script>
     </body>
 </html>
